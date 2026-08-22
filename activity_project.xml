@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#0D1117">
+
+    <TextView
+        android:id="@+id/projectTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="اسم المشروع"
+        android:textSize="24sp"
+        android:textColor="#58A6FF"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/generatePdfBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="📄 تحميل PDF"
+        android:backgroundTint="#238636"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="16dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/pagesRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

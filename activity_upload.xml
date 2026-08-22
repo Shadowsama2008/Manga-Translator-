@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#0D1117">
+
+    <EditText
+        android:id="@+id/projectNameInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="اسم المشروع"
+        android:background="#161B22"
+        android:padding="12dp"
+        android:textColor="#C9D1D9"
+        android:textColorHint="#8B949E"
+        android:layout_marginBottom="12dp" />
+
+    <Spinner
+        android:id="@+id/langSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/languages"
+        android:background="#161B22"
+        android:layout_marginBottom="12dp" />
+
+    <Button
+        android:id="@+id/pickImagesBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="اختر الصور"
+        android:backgroundTint="#1F6FEB"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="12dp" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp">
+
+        <LinearLayout
+            android:id="@+id/imagesContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+    </HorizontalScrollView>
+
+    <Button
+        android:id="@+id/uploadBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="رفع وترجمة"
+        android:backgroundTint="#238636"
+        android:textColor="#FFFFFF" />
+
+</LinearLayout>
