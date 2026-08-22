@@ -1,0 +1,35 @@
+name: بناء تطبيق Android
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: سحب الكود
+        uses: actions/checkout@v3
+
+      - name: تثبيت JDK 17
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'zulu'
+          java-version: '17'
+
+      - name: تثبيت Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: بناء APK
+        run: |
+          chmod +x gradlew
+          ./gradlew assembleDebug
+
+      - name: رفع ملف APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: التطبيق-النهائي
+          path: app/build/outputs/apk/debug/*.apk
